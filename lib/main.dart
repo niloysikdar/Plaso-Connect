@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plaso_connect/constants/colors.dart';
+import 'package:plaso_connect/screens/plasmaform.dart';
 import 'package:plaso_connect/screens/signup.dart';
 
 Future<void> main() async {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kelectronBlue,
         iconTheme: IconThemeData(color: kelectronBlue),
       ),
-      home: SignUpPage(),
+      home: PlasmaDonate(),
     );
   }
 }
