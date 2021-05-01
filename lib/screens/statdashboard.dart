@@ -87,10 +87,12 @@ class _TotalStatsDashboardState extends State<TotalStatsDashboard> {
   }
 
   Widget bodyContainer({required Size size}) {
-    Widget finalWidget = SizedBox(
-      height: 150,
-      width: 150,
-      child: CircularProgressIndicator(),
+    Widget finalWidget = Center(
+      child: SizedBox(
+        height: 50,
+        width: 50,
+        child: CircularProgressIndicator(),
+      ),
     );
 
     if (!isloading) {
