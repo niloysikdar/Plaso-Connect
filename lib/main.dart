@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plaso_connect/constants/colors.dart';
-import 'package:plaso_connect/screens/statdashboard.dart';
+import 'package:plaso_connect/screens/plasmaform.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kelectronBlue,
         iconTheme: IconThemeData(color: kelectronBlue),
       ),
-      home: TotalStatsDashboard(),
+      home: PlasmaDonate(),
     );
   }
 }
