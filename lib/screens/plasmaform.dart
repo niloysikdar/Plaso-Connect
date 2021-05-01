@@ -125,30 +125,35 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                       prefixIcon: Icons.account_circle_rounded,
                       hintText: "Full Name",
                       textInputType: TextInputType.name,
+                      maxLines: 1,
                     ),
                     inputforPlasma(
                       controller: phonecontroller,
                       prefixIcon: Icons.phone_rounded,
                       hintText: "Phone Number",
                       textInputType: TextInputType.phone,
+                      maxLines: 1,
                     ),
                     inputforPlasma(
                       controller: agecontroller,
                       prefixIcon: Icons.add_rounded,
                       hintText: "Age",
                       textInputType: TextInputType.number,
+                      maxLines: 1,
                     ),
                     inputforPlasma(
                       controller: addresscontroller,
                       prefixIcon: Icons.location_on_rounded,
                       hintText: "Full Address",
                       textInputType: TextInputType.name,
+                      maxLines: 3,
                     ),
                     inputforPlasma(
                       controller: pincontroller,
                       prefixIcon: Icons.location_on_rounded,
                       hintText: "Address PIN code",
                       textInputType: TextInputType.number,
+                      maxLines: 1,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5),
@@ -292,6 +297,7 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                             prefixIcon: Icons.date_range_rounded,
                             hintText: "Date of Recovery",
                             textInputType: TextInputType.datetime,
+                            maxLines: 1,
                           )
                         : Container(height: 0),
                     Row(
@@ -408,6 +414,7 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
     required IconData prefixIcon,
     required String hintText,
     required TextInputType textInputType,
+    required int maxLines,
   }) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
@@ -416,6 +423,7 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
         prefixIcon: prefixIcon,
         hintText: hintText,
         textInputType: textInputType,
+        maxLines: maxLines,
       ),
     );
   }

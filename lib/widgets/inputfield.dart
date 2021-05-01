@@ -7,6 +7,7 @@ Widget inputField({
   required IconData prefixIcon,
   required String hintText,
   required TextInputType textInputType,
+  required int maxLines,
 }) {
   return Container(
     decoration: newboxDecoration(),
@@ -17,6 +18,7 @@ Widget inputField({
         fontSize: 22,
         color: Colors.grey[700],
       ),
+      maxLines: maxLines,
       decoration: InputDecoration(
         filled: true,
         fillColor: Color(0xFFEFEEEE),
