@@ -34,4 +34,11 @@ class DatabaseMethod {
       print(e.toString());
     }
   }
+
+  Stream<QuerySnapshot> getOxygen({required String pin}) {
+    return db
+        .collection("oxygenPosts")
+        .where("pin", isEqualTo: pin)
+        .snapshots();
+  }
 }
