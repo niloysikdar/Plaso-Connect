@@ -59,6 +59,9 @@ class ShowOxygenPosts extends StatelessWidget {
     required OxygenPostModel oxygenPostModel,
     required Size size,
   }) {
+    DateTime createdOn = DateTime.parse(oxygenPostModel.postedOn);
+    String timestring =
+        "${createdOn.day.toString().padLeft(2, '0')}/${createdOn.month.toString().padLeft(2, '0')}/${createdOn.year.toString()}, ${createdOn.hour.toString()}:${createdOn.minute.toString()}";
     return Container(
       margin: EdgeInsets.all(20),
       padding: EdgeInsets.all(20),
@@ -95,7 +98,7 @@ class ShowOxygenPosts extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
-            "30/07/2001 -by Admin",
+            "$timestring -by ${oxygenPostModel.postedBy}",
             style: TextStyle(
               color: kelectronBlue,
               fontSize: 18,
@@ -104,7 +107,7 @@ class ShowOxygenPosts extends StatelessWidget {
           ),
           SizedBox(height: 3),
           Text(
-            "Role: Admin",
+            "Role: ${oxygenPostModel.postedRole}",
             style: TextStyle(
               color: Colors.grey[800],
               fontSize: 18,
