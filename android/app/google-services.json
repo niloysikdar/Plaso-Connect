@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "738401306408",
+    "project_id": "plaso-connect-demo",
+    "storage_bucket": "plaso-connect-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738401306408:android:ffd9fe0392346ec6ea721d",
+        "android_client_info": {
+          "package_name": "com.example.plaso_connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738401306408-j2pu2fmtuhmkbe2k5sks08ptjlmutik4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plaso_connect",
+            "certificate_hash": "d7126d7e8df9109930d3da8d61331117d2282ed3"
+          }
+        },
+        {
+          "client_id": "738401306408-6vobpdsuchf4ovvrgmvgvvp33fqf3q7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM2ndPvkDWVKg7-SLGwdTVd5is-OhZ87Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738401306408-6vobpdsuchf4ovvrgmvgvvp33fqf3q7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

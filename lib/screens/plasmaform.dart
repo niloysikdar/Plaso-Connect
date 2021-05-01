@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plaso_connect/constants/colors.dart';
+import 'package:plaso_connect/models/donormodel.dart';
+import 'package:plaso_connect/services/database.dart';
 import 'package:plaso_connect/widgets/inputfield.dart';
 
 class PlasmaDonate extends StatefulWidget {
@@ -41,6 +43,34 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
     pincontroller.dispose();
     dateOfRecoverycontroller.dispose();
     super.dispose();
+  }
+
+  void donePressed() async {
+    var donorModel = DonorModel(
+      name: namecontroller.text,
+      phone: phonecontroller.text,
+      age: agecontroller.text,
+      address: addresscontroller.text,
+      pin: pincontroller.text,
+      bloodGroup: bloodGroup,
+      covidStatus: covidStatus.toString(),
+      dateOfRecovery: dateOfRecoverycontroller.text,
+      vaccinationStatus: isVaccinated.toString(),
+    );
+    await DatabaseMethod().uploadDonor(donorModel);
+    clearInput();
+  }
+
+  void clearInput() {
+    namecontroller.clear();
+    phonecontroller.clear();
+    agecontroller.clear();
+    addresscontroller.clear();
+    pincontroller.clear();
+    dateOfRecoverycontroller.clear();
+    isVaccinated = 1;
+    bloodGroup = "A+";
+    covidStatus = 1;
   }
 
   @override
@@ -285,12 +315,14 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                         ],
                       ),
                     ),
-                    inputforPlasma(
-                      controller: dateOfRecoverycontroller,
-                      prefixIcon: Icons.date_range_rounded,
-                      hintText: "Date of Recovery",
-                      textInputType: TextInputType.datetime,
-                    ),
+                    (covidStatus == 1)
+                        ? inputforPlasma(
+                            controller: dateOfRecoverycontroller,
+                            prefixIcon: Icons.date_range_rounded,
+                            hintText: "Date of Recovery",
+                            textInputType: TextInputType.datetime,
+                          )
+                        : Container(height: 0),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -361,7 +393,7 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                     SizedBox(height: 20),
                     GestureDetector(
                       onTap: () {
-                        print("Done");
+                        donePressed();
                       },
                       child: doneBtn(),
                     ),
