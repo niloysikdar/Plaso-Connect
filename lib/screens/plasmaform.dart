@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plaso_connect/constants/colors.dart';
 import 'package:plaso_connect/widgets/inputfield.dart';
 
@@ -74,11 +75,12 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30),
                   ),
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/banner2.png"),
-                    fit: BoxFit.cover,
-                  ),
+                  // image: DecorationImage(
+                  //   image: AssetImage("assets/images/banner2.png"),
+                  //   fit: BoxFit.cover,
+                  // ),
                 ),
+                child: SvgPicture.asset("assets/images/login.svg"),
               ),
             ),
             SingleChildScrollView(
