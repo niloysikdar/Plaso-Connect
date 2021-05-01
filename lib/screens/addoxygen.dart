@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plaso_connect/constants/colors.dart';
+import 'package:plaso_connect/models/oxygenpostmodel.dart';
+import 'package:plaso_connect/services/database.dart';
 import 'package:plaso_connect/widgets/formbanner.dart';
 import 'package:plaso_connect/widgets/inputfield.dart';
 
@@ -15,6 +17,19 @@ class _AddOxygenDetailsState extends State<AddOxygenDetails> {
 
   String headerstring =
       "Please ensure all the data that you are providing are from verified sources.\nFeeding any false information or spamming will lead to permanent ban.";
+
+  void postPressed() async {
+    var oxygenPostModel = OxygenPostModel(
+      title: titlecontroller.text,
+      description: descriptioncontroller.text,
+      pin: pincontroller.text,
+      postedOn: DateTime.now().toString(),
+      postedBy: "Admin",
+      postedRole: "Admin",
+    );
+    await DatabaseMethod().uploadOxygen(oxygenPostModel);
+    clearcontrollers();
+  }
 
   void clearcontrollers() {
     titlecontroller.clear();
@@ -108,6 +123,7 @@ class _AddOxygenDetailsState extends State<AddOxygenDetails> {
                     SizedBox(height: 30),
                     GestureDetector(
                       onTap: () {
+                        postPressed();
                         print("Posted");
                       },
                       child: doneBtn(),

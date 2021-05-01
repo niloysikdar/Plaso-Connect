@@ -14,11 +14,11 @@ Widget inputField({
     child: TextFormField(
       controller: controller,
       keyboardType: textInputType,
+      maxLines: maxLines,
       style: TextStyle(
         fontSize: 22,
         color: Colors.grey[700],
       ),
-      maxLines: maxLines,
       decoration: InputDecoration(
         filled: true,
         fillColor: Color(0xFFEFEEEE),
