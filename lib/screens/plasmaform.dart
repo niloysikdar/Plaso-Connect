@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plaso_connect/constants/colors.dart';
 import 'package:plaso_connect/widgets/inputfield.dart';
 
