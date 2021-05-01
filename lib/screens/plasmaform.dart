@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plaso_connect/constants/colors.dart';
 import 'package:plaso_connect/models/donormodel.dart';
 import 'package:plaso_connect/services/database.dart';
+import 'package:plaso_connect/widgets/formbanner.dart';
 import 'package:plaso_connect/widgets/inputfield.dart';
 
 class PlasmaDonate extends StatefulWidget {
@@ -80,38 +80,9 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
       child: Scaffold(
         body: Stack(
           children: [
-            Positioned(
-              top: 0,
-              left: 0,
-              child: Container(
-                height: size.height * 0.3,
-                width: size.width,
-                padding: EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: klightShadowForLight,
-                      offset: Offset(0.0, 0.0),
-                      blurRadius: 7.0,
-                    ),
-                    BoxShadow(
-                      color: kdarkShadowForLight,
-                      offset: Offset(4.0, 4.0),
-                      blurRadius: 7.0,
-                    ),
-                  ],
-                  color: Color(0xFFEFEEEE),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30),
-                  ),
-                  // image: DecorationImage(
-                  //   image: AssetImage("assets/images/banner2.png"),
-                  //   fit: BoxFit.cover,
-                  // ),
-                ),
-                child: SvgPicture.asset("assets/images/login.svg"),
-              ),
+            formBanner(
+              size: size,
+              svgPath: "assets/images/login.svg",
             ),
             SingleChildScrollView(
               child: Container(
@@ -154,30 +125,35 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                       prefixIcon: Icons.account_circle_rounded,
                       hintText: "Full Name",
                       textInputType: TextInputType.name,
+                      maxLines: 1,
                     ),
                     inputforPlasma(
                       controller: phonecontroller,
                       prefixIcon: Icons.phone_rounded,
                       hintText: "Phone Number",
                       textInputType: TextInputType.phone,
+                      maxLines: 1,
                     ),
                     inputforPlasma(
                       controller: agecontroller,
                       prefixIcon: Icons.add_rounded,
                       hintText: "Age",
                       textInputType: TextInputType.number,
+                      maxLines: 1,
                     ),
                     inputforPlasma(
                       controller: addresscontroller,
                       prefixIcon: Icons.location_on_rounded,
                       hintText: "Full Address",
                       textInputType: TextInputType.name,
+                      maxLines: 3,
                     ),
                     inputforPlasma(
                       controller: pincontroller,
                       prefixIcon: Icons.location_on_rounded,
                       hintText: "Address PIN code",
                       textInputType: TextInputType.number,
+                      maxLines: 1,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5),
@@ -321,6 +297,7 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                             prefixIcon: Icons.date_range_rounded,
                             hintText: "Date of Recovery",
                             textInputType: TextInputType.datetime,
+                            maxLines: 1,
                           )
                         : Container(height: 0),
                     Row(
@@ -437,6 +414,7 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
     required IconData prefixIcon,
     required String hintText,
     required TextInputType textInputType,
+    required int maxLines,
   }) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
@@ -445,6 +423,7 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
         prefixIcon: prefixIcon,
         hintText: hintText,
         textInputType: textInputType,
+        maxLines: maxLines,
       ),
     );
   }

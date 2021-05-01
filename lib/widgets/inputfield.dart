@@ -7,12 +7,14 @@ Widget inputField({
   required IconData prefixIcon,
   required String hintText,
   required TextInputType textInputType,
+  required int maxLines,
 }) {
   return Container(
     decoration: newboxDecoration(),
     child: TextFormField(
       controller: controller,
       keyboardType: textInputType,
+      maxLines: maxLines,
       style: TextStyle(
         fontSize: 22,
         color: Colors.grey[700],

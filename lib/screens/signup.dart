@@ -45,6 +45,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   prefixIcon: Icons.account_circle_rounded,
                   hintText: "Full Name",
                   textInputType: TextInputType.name,
+                  maxLines: 1,
                 ),
                 SizedBox(height: 25),
                 inputField(
@@ -52,6 +53,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   prefixIcon: Icons.phone,
                   hintText: "Phone Number",
                   textInputType: TextInputType.phone,
+                  maxLines: 1,
                 ),
                 SizedBox(height: 35),
                 loginButton(
