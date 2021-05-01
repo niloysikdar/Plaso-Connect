@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plaso_connect/screens/plasmaform.dart';
 import 'package:plaso_connect/widgets/inputfield.dart';
 import 'package:plaso_connect/widgets/loginbutton.dart';
 import 'package:plaso_connect/widgets/loginheader.dart';
@@ -58,6 +59,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   text: "Sign In/Up",
                   onTap: () {
                     print("Done");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return PlasmaDonate();
+                      }),
+                    );
                   },
                 ),
               ],
