@@ -16,7 +16,7 @@ class _AddOxygenDetailsState extends State<AddOxygenDetails> {
           children: [
             formBanner(
               size: size,
-              svgPath: "assets/images/login.svg",
+              svgPath: "assets/images/medicine.svg",
             ),
           ],
         ),
