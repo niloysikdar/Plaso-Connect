@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:plaso_connect/constants/colors.dart';
-import 'package:plaso_connect/screens/selectoxygen.dart';
-import 'package:plaso_connect/screens/selectplasma.dart';
-import 'package:plaso_connect/screens/statdashboard.dart';
+import 'package:plaso_connect/screens/addoxygen.dart';
+import 'package:plaso_connect/screens/showOxygenposts.dart';
 import 'package:plaso_connect/widgets/boxdecoration.dart';
 
-class HomeScreen extends StatelessWidget {
+class SelectOxygen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,7 +16,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 30, bottom: 15),
               child: Text(
-                "What are you looking for ?",
+                "Choose an option :",
                 style: TextStyle(
                   color: kelectronBlue,
                   fontSize: 22,
@@ -25,42 +24,27 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            homeButton(
-              text: "Latest COVID Stats",
+            selectOxygenButton(
+              text: "Add a Source",
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return TotalStatsDashboard();
+                    return AddOxygenDetails();
                   }),
                 );
               },
             ),
-            homeButton(
-              text: "Plasma/Blood",
+            selectOxygenButton(
+              text: "Avaible Sources",
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return SelectPlasma();
+                    return ShowOxygenPosts();
                   }),
                 );
               },
-            ),
-            homeButton(
-              text: "Oxygen and support",
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return SelectOxygen();
-                  }),
-                );
-              },
-            ),
-            homeButton(
-              text: "More",
-              onTap: () {},
             ),
           ],
         ),
@@ -68,7 +52,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget homeButton({
+  Widget selectOxygenButton({
     required String text,
     required Function onTap,
   }) {
