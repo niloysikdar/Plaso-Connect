@@ -15,10 +15,15 @@ class _AddOxygenDetailsState extends State<AddOxygenDetails> {
   late TextEditingController descriptioncontroller;
   late TextEditingController pincontroller;
 
+  bool isUploading = false;
+
   String headerstring =
       "Please ensure all the data that you are providing are from verified sources.\nFeeding any false information or spamming will lead to permanent ban.";
 
   void postPressed() async {
+    setState(() {
+      isUploading = true;
+    });
     var oxygenPostModel = OxygenPostModel(
       title: titlecontroller.text,
       description: descriptioncontroller.text,
@@ -29,6 +34,8 @@ class _AddOxygenDetailsState extends State<AddOxygenDetails> {
     );
     await DatabaseMethod().uploadOxygen(oxygenPostModel);
     clearcontrollers();
+    isUploading = false;
+    setState(() {});
   }
 
   void clearcontrollers() {
@@ -132,6 +139,20 @@ class _AddOxygenDetailsState extends State<AddOxygenDetails> {
                 ),
               ),
             ),
+            (isUploading)
+                ? Container(
+                    height: double.infinity,
+                    width: double.infinity,
+                    color: Colors.grey.withOpacity(0.5),
+                    child: Center(
+                      child: SizedBox(
+                        height: size.width * 0.2,
+                        width: size.width * 0.2,
+                        child: CircularProgressIndicator(),
+                      ),
+                    ),
+                  )
+                : Container(height: 0, width: 0),
           ],
         ),
       ),
