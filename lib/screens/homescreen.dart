@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:plaso_connect/constants/colors.dart';
 import 'package:plaso_connect/screens/selectoxygen.dart';
 import 'package:plaso_connect/screens/selectplasma.dart';
@@ -58,7 +59,17 @@ class HomeScreen extends StatelessWidget {
             ),
             homeButton(
               text: "More",
-              onTap: () {},
+              onTap: () {
+                Fluttertoast.showToast(
+                  msg: "Coming Soon",
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.BOTTOM,
+                  timeInSecForIosWeb: 1,
+                  backgroundColor: Colors.red,
+                  textColor: Colors.white,
+                  fontSize: 18.0,
+                );
+              },
             ),
           ],
         ),
