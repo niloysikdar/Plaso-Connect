@@ -3,6 +3,7 @@ import 'package:plaso_connect/constants/colors.dart';
 import 'package:plaso_connect/screens/selectoxygen.dart';
 import 'package:plaso_connect/screens/selectplasma.dart';
 import 'package:plaso_connect/screens/statdashboard.dart';
+import 'package:plaso_connect/services/transitions.dart';
 import 'package:plaso_connect/widgets/boxdecoration.dart';
 import 'package:plaso_connect/widgets/logowidget.dart';
 
@@ -33,9 +34,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return TotalStatsDashboard();
-                  }),
+                  SlideLeftRoute(page: TotalStatsDashboard()),
                 );
               },
             ),
@@ -44,9 +43,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return SelectPlasma();
-                  }),
+                  SlideLeftRoute(page: SelectPlasma()),
                 );
               },
             ),
@@ -55,9 +52,7 @@ class HomeScreen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return SelectOxygen();
-                  }),
+                  SlideLeftRoute(page: SelectOxygen()),
                 );
               },
             ),

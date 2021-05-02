@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:plaso_connect/constants/colors.dart';
 import 'package:plaso_connect/screens/homescreen.dart';
+import 'package:plaso_connect/services/transitions.dart';
 import 'package:plaso_connect/widgets/boxdecoration.dart';
 
 class LandingScreen extends StatelessWidget {
@@ -39,9 +40,7 @@ class LandingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }),
+                  SlideLeftRoute(page: HomeScreen()),
                 );
               },
             ),
@@ -50,9 +49,7 @@ class LandingScreen extends StatelessWidget {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return HomeScreen();
-                  }),
+                  SlideLeftRoute(page: HomeScreen()),
                 );
               },
             ),

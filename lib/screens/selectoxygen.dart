@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:plaso_connect/constants/colors.dart';
 import 'package:plaso_connect/screens/addoxygen.dart';
 import 'package:plaso_connect/screens/showOxygenposts.dart';
+import 'package:plaso_connect/services/transitions.dart';
 import 'package:plaso_connect/widgets/boxdecoration.dart';
 
 class SelectOxygen extends StatelessWidget {
@@ -29,9 +30,7 @@ class SelectOxygen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return AddOxygenDetails();
-                  }),
+                  SlideLeftRoute(page: AddOxygenDetails()),
                 );
               },
             ),
@@ -40,9 +39,7 @@ class SelectOxygen extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) {
-                    return ShowOxygenPosts();
-                  }),
+                  SlideLeftRoute(page: ShowOxygenPosts()),
                 );
               },
             ),
