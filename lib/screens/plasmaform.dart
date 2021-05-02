@@ -23,6 +23,8 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
   String covidquestion = "Have you ever tested covid positive ?";
   int covidStatus = 1;
 
+  bool isUploading = false;
+
   @override
   void initState() {
     super.initState();
@@ -46,6 +48,9 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
   }
 
   void donePressed() async {
+    setState(() {
+      isUploading = true;
+    });
     var donorModel = DonorModel(
       name: namecontroller.text,
       phone: phonecontroller.text,
@@ -59,6 +64,8 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
     );
     await DatabaseMethod().uploadDonor(donorModel);
     clearInput();
+    isUploading = false;
+    setState(() {});
   }
 
   void clearInput() {
@@ -379,6 +386,20 @@ class _PlasmaDonateState extends State<PlasmaDonate> {
                 ),
               ),
             ),
+            (isUploading)
+                ? Container(
+                    height: double.infinity,
+                    width: double.infinity,
+                    color: Colors.grey.withOpacity(0.5),
+                    child: Center(
+                      child: SizedBox(
+                        height: size.width * 0.2,
+                        width: size.width * 0.2,
+                        child: CircularProgressIndicator(),
+                      ),
+                    ),
+                  )
+                : Container(height: 0, width: 0),
           ],
         ),
       ),
