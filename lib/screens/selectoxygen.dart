@@ -35,7 +35,7 @@ class SelectOxygen extends StatelessWidget {
               },
             ),
             selectOxygenButton(
-              text: "Avaible Sources",
+              text: "Available Sources",
               onTap: () {
                 Navigator.push(
                   context,

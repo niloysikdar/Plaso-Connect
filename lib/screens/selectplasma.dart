@@ -35,7 +35,7 @@ class SelectPlasma extends StatelessWidget {
               },
             ),
             selectPlasmaButton(
-              text: "Availbe Donors",
+              text: "Available Donors",
               onTap: () {
                 Navigator.push(
                   context,
