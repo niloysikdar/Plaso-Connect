@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plaso_connect/constants/colors.dart';
+import 'package:plaso_connect/screens/selectplasma.dart';
 import 'package:plaso_connect/screens/statdashboard.dart';
 import 'package:plaso_connect/widgets/boxdecoration.dart';
 
@@ -40,7 +41,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return TotalStatsDashboard();
+                    return SelectPlasma();
                   }),
                 );
               },

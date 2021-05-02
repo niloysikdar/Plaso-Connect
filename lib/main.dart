@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plaso_connect/constants/colors.dart';
-import 'package:plaso_connect/screens/homescreen.dart';
+import 'package:plaso_connect/screens/selectplasma.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,19 +18,21 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        textTheme: GoogleFonts.firaSansTextTheme(
-          Theme.of(context).textTheme,
+    return SafeArea(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          textTheme: GoogleFonts.firaSansTextTheme(
+            Theme.of(context).textTheme,
+          ),
+          scaffoldBackgroundColor: kbackgroundLight,
+          primarySwatch: kelectronBlue,
+          accentColor: kelectronBlue,
+          primaryColor: kelectronBlue,
+          iconTheme: IconThemeData(color: kelectronBlue),
         ),
-        scaffoldBackgroundColor: kbackgroundLight,
-        primarySwatch: kelectronBlue,
-        accentColor: kelectronBlue,
-        primaryColor: kelectronBlue,
-        iconTheme: IconThemeData(color: kelectronBlue),
+        home: SelectPlasma(),
       ),
-      home: HomeScreen(),
     );
   }
 }
