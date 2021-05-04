@@ -3,7 +3,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
-###### <p align = "center"> A one-stop platform for COVID relief resources -- Connecting patients with Plasma donors and oxygen suppliers. Built for the citizens, to win over the pandemic </p>
+### <p align = "center"> A one-stop platform for COVID relief resources -- Connecting patients with Plasma donors and oxygen suppliers. Built for the citizens, to win over the pandemic </p>
 
 ## INSPIRATION ⭐
 Living amidst the pandemic has become a challenge for the citizens of India. With the exponential rise in the number of daily infections of late, we can see an ever-increasing demand for the healthy plasma donors and oxygen units, whereas the supply isn’t enough to cover the disparity. Moreover, what’s more serious is that help is not reaching the people in need at the right time and people are having to experience the unfortunate death of their beloved. Citizens are desperately looking for support all over social media but by the time a lifeline is acquired, it’s already too late. At the same time the accountability of resources on the internet is a big concern. Inspired by how social media is playing an instrumental role in trying to help people find support for the patients, we decided to create a platform that bridges the gap and connects the users in need with the right people providing life-sustaining resources. 
@@ -19,9 +19,21 @@ Plaso Connect is an application which acts as a one-stop solution where the peop
 * The final section will be a one-in-all portal that shows a dashboard of live COVID-19 stats and the medical dos and don’ts guidelines for everyone to follow in the pandemic.
 
 ## TECH STACK USED ⚙
-*	Google Flutter (For building the App)
+*	Flutter (For building the App)
 *	Firebase and Firestore (To maintain App database and accounts)
 *	APIs (covid APIs, etc for showing Covid related data and other features)
+
+## SCREENSHOTS 👀
+
+<p align="center">
+<img src="https://i.imgur.com/PTZQJwZ.png" height="350">
+<img src="https://i.imgur.com/TF6NJch.png" height="350">
+<img src="https://i.imgur.com/gqB8Mks.png" height="350">
+<img src="https://i.imgur.com/uFHK4Qd.png" height="350">
+<img src="https://i.imgur.com/OuygEO2.png" height="350">
+<img src="https://i.imgur.com/eLdSazC.png" height="350">
+<img src="https://imgur.com/Ymw9IzW.png" height="350">
+</p>
 
 ## FUTURE IMPROVEMENTS  💻
 *	Multiple languages support
@@ -30,6 +42,7 @@ Plaso Connect is an application which acts as a one-stop solution where the peop
 *	Cross-platform OS support – to expand it for Apple iOS 
 *	Nearest Healthcare Center/Hospital Maps
 *	Editable User Profile options
+*	Dynamic life support dashboard index with automatic update feature
 
 ## Project Authors 👨‍💻
 * Niloy Sikdar
