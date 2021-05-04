@@ -26,13 +26,13 @@ Plaso Connect is an application which acts as a one-stop solution where the peop
 ## SCREENSHOTS 👀
 
 <p align="center">
-<img src="https://i.imgur.com/PTZQJwZ.png" height="280">
-<img src="https://i.imgur.com/TF6NJch.png" height="280">
-<img src="https://i.imgur.com/gqB8Mks.png" height="280">
-<img src="https://i.imgur.com/uFHK4Qd.png" height="280">
-<img src="https://i.imgur.com/OuygEO2.png" height="280">
-<img src="https://i.imgur.com/eLdSazC.png" height="280">
-<img src="https://imgur.com/Ymw9IzW.png" height="280">
+<img src="https://i.imgur.com/PTZQJwZ.png" height="350">
+<img src="https://i.imgur.com/TF6NJch.png" height="350">
+<img src="https://i.imgur.com/gqB8Mks.png" height="350">
+<img src="https://i.imgur.com/uFHK4Qd.png" height="350">
+<img src="https://i.imgur.com/OuygEO2.png" height="350">
+<img src="https://i.imgur.com/eLdSazC.png" height="350">
+<img src="https://imgur.com/Ymw9IzW.png" height="350">
 </p>
 
 ## FUTURE IMPROVEMENTS  💻
