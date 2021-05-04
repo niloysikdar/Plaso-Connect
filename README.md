@@ -1,8 +1,14 @@
 # <p align = "center"> PLASO CONNECT - The Lifeline </p>
-![Project Banner](https://i.pinimg.com/originals/88/45/0f/88450f0f3601d63c0f750ad8ce932670.jpg) </p>
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-for-android.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-responsibility.svg)](https://forthebadge.com)
+<p align="center">
+  <img src="https://i.pinimg.com/originals/88/45/0f/88450f0f3601d63c0f750ad8ce932670.jpg">
+ </p>
+<p align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg">
+<img src="https://forthebadge.com/images/badges/built-for-android.svg">
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg">  
+</p>
+
+
 ### <p align = "center"> A one-stop platform for COVID relief resources -- Connecting patients with Plasma donors and oxygen suppliers. Built for the citizens, to win over the pandemic </p>
 
 ## INSPIRATION ⭐
@@ -38,11 +44,11 @@ Plaso Connect is an application which acts as a one-stop solution where the peop
 ## FUTURE IMPROVEMENTS  💻
 *	Multiple languages support
 *	Offline Facilities
-*	Location-based SOS Button – this tool will help people to 
+*	Location-based SOS Button
 *	Cross-platform OS support – to expand it for Apple iOS 
 *	Nearest Healthcare Center/Hospital Maps
-*	Editable User Profile options
 *	Dynamic life support dashboard index with automatic update feature
+*	Editable User Profile options
 
 ## Project Authors 👨‍💻
 * Niloy Sikdar
