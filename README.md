@@ -1,5 +1,7 @@
 # <p align = "center"> PLASO CONNECT - The Lifeline </p>
-![Project Banner](https://i.pinimg.com/originals/88/45/0f/88450f0f3601d63c0f750ad8ce932670.jpg)
+<p align="center">
+  <img src="https://i.pinimg.com/originals/88/45/0f/88450f0f3601d63c0f750ad8ce932670.jpg">
+ </p>
 <p align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">
 <img src="https://forthebadge.com/images/badges/built-for-android.svg">
